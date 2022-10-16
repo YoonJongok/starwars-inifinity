@@ -1,5 +1,5 @@
 import React from "react";
-import { Post as GetPostType } from "../api/axios";
+import { PostResponse as GetPostType } from "../api/axios";
 
 export type PostType = {
 	post: GetPostType;

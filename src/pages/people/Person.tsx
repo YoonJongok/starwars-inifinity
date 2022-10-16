@@ -18,9 +18,11 @@ export const Person = React.forwardRef<HTMLDivElement, PersonProps>(
 		);
 
 		const content = ref ? (
-			<div ref={ref}>{personBody}</div>
+			<div style={{ height: "150px" }} ref={ref}>
+				{personBody}
+			</div>
 		) : (
-			<div>{personBody}</div>
+			<div style={{ height: "150px" }}>{personBody}</div>
 		);
 
 		return content;

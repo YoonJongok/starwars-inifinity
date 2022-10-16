@@ -1,5 +1,6 @@
 import axios from "axios";
-export type Post = {
+
+export type PostResponse = {
 	userId: number;
 	id: number;
 	title: string;
@@ -11,6 +12,9 @@ export const api = axios.create({
 });
 
 export const getPostsPage = async (pageParam = 1, options = {}) => {
-	const response = await api.get<Post[]>(`/posts?_page=${pageParam}`, options);
+	const response = await api.get<PostResponse[]>(
+		`/posts?_page=${pageParam}`,
+		options
+	);
 	return response.data;
 };
